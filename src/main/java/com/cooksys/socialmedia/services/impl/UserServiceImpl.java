@@ -94,8 +94,6 @@ public class UserServiceImpl implements UserService {
             throw new NotFoundException("No user with the given username.");
         }
 
-        System.out.println(current.getCredentials());
-        System.out.println(credentials);
         if (credentialsMapper.entityToDto(current.getCredentials()).equals(credentials)) {
             current.setDeleted(true);
         } else {

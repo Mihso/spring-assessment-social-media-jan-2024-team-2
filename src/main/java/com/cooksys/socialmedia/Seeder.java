@@ -1,33 +1,33 @@
-package com.cooksys.socialmedia;
-
-import java.util.Arrays;
-import java.util.List;
-
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
-
-import com.cooksys.socialmedia.entities.Credentials;
-import com.cooksys.socialmedia.entities.Hashtag;
-import com.cooksys.socialmedia.entities.Profile;
-import com.cooksys.socialmedia.entities.Tweet;
-import com.cooksys.socialmedia.entities.User;
-import com.cooksys.socialmedia.repositories.HashtagRepository;
-import com.cooksys.socialmedia.repositories.TweetRepository;
-import com.cooksys.socialmedia.repositories.UserRepository;
-
-import lombok.RequiredArgsConstructor;
-
-@Component
-@RequiredArgsConstructor
-public class Seeder implements CommandLineRunner {
-
-    private final HashtagRepository hashtagRepository;
-    private final TweetRepository tweetRepository;
-    private final UserRepository userRepository;
-
-    @Override
-    public void run(String... args) throws Exception {
-
+//package com.cooksys.socialmedia;
+//
+//import java.util.Arrays;
+//import java.util.List;
+//
+//import org.springframework.boot.CommandLineRunner;
+//import org.springframework.stereotype.Component;
+//
+//import com.cooksys.socialmedia.entities.Credentials;
+//import com.cooksys.socialmedia.entities.Hashtag;
+//import com.cooksys.socialmedia.entities.Profile;
+//import com.cooksys.socialmedia.entities.Tweet;
+//import com.cooksys.socialmedia.entities.User;
+//import com.cooksys.socialmedia.repositories.HashtagRepository;
+//import com.cooksys.socialmedia.repositories.TweetRepository;
+//import com.cooksys.socialmedia.repositories.UserRepository;
+//
+//import lombok.RequiredArgsConstructor;
+//
+//@Component
+//@RequiredArgsConstructor
+//public class Seeder implements CommandLineRunner {
+//
+//    private final HashtagRepository hashtagRepository;
+//    private final TweetRepository tweetRepository;
+//    private final UserRepository userRepository;
+//
+//    @Override
+//    public void run(String... args) throws Exception {
+//
 //        // --- User 1 ---
 //        // Credentials
 //        Credentials user1Cred = new Credentials();
@@ -250,7 +250,11 @@ public class Seeder implements CommandLineRunner {
 //
 //        user3.setLikedTweets(user2Tweets);
 //        userRepository.saveAndFlush(user3);
+<<<<<<< HEAD
 //        
+=======
+//
+>>>>>>> ab35b366440ff93df8728c4d47e221604c87f6a4
 //        deletedUser.setLikedTweets(user2Tweets);
 //        userRepository.saveAndFlush(deletedUser);
 //
@@ -278,6 +282,12 @@ public class Seeder implements CommandLineRunner {
 //        List<User> followers_1 = List.of(user5, deletedUser);
 //        user1.setFollowers(followers_1);
 //        userRepository.saveAndFlush(user1);
+<<<<<<< HEAD
     }
 
 }
+=======
+//    }
+//
+//}
+>>>>>>> ab35b366440ff93df8728c4d47e221604c87f6a4

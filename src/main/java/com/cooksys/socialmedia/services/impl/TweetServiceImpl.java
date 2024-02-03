@@ -1,12 +1,5 @@
 package com.cooksys.socialmedia.services.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Arrays;
-
-import org.springframework.stereotype.Service;
-
 import com.cooksys.socialmedia.dtos.*;
 import com.cooksys.socialmedia.entities.Credentials;
 import com.cooksys.socialmedia.entities.Hashtag;
@@ -24,6 +17,11 @@ import com.cooksys.socialmedia.repositories.TweetRepository;
 import com.cooksys.socialmedia.repositories.UserRepository;
 import com.cooksys.socialmedia.services.TweetService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 
 
@@ -378,13 +376,13 @@ public class TweetServiceImpl implements TweetService {
   	if(tweetRequest.getContent() == null) {
   		throw new BadRequestException("Content needs to be filled in.");
   	}
-  	
-  	
+
+
   	current.setAuthor(foundUser.get());
   	current.setContent(tweetRequest.getContent());
   	current.setHashtags(hashtagWords);
   	current.setMentionedUsers(mentionUsers);
-  	
+
   	return tweetMapper.entityToDto(tweetRepository.saveAndFlush(current));
   }
   
